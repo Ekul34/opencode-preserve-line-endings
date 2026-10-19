@@ -9,7 +9,7 @@ test("built package exports a V2 definition with no runtime dependencies", () =>
   assert.equal(manifest.license, "0BSD")
   assert.equal(manifest.exports["./server"].import, "./dist/index.js")
   assert.equal(manifest.dependencies, undefined)
-  for (const lifecycle of ["prepare", "prepack", "install", "preinstall", "postinstall"]) {
+  for (const lifecycle of ["prepare", "prepack", "build", "install", "preinstall", "postinstall"]) {
     assert.equal(manifest.scripts[lifecycle], undefined, `Git installs must not run ${lifecycle}`)
   }
   assert.equal(plugin.id, "preserve-line-endings")

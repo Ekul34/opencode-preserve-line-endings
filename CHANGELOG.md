@@ -2,8 +2,9 @@
 
 ## 0.1.1 — 2026-10-19
 
-- Remove the `prepack` lifecycle hook: OpenCode's production Git installer must
-  use the committed JavaScript without attempting a TypeScript build.
+- Remove `prepack` and rename the development `build` script to `compile`:
+  npm's Git fetcher treats either name as requiring dependency preparation, even
+  when lifecycle scripts are disabled. Git installs now use committed JavaScript.
 - Guard against installation lifecycle scripts in the package regression test.
 
 ## 0.1.0 — 2026-10-19

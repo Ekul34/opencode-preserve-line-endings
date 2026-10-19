@@ -21,10 +21,10 @@
   },
   "files": ["dist", "src", "index.ts", "LICENSE", "README.md", "CHANGELOG.md", "CONTRIBUTING.md"],
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "compile": "tsc -p tsconfig.json",
     "check": "tsc -p tsconfig.test.json",
     "test": "node --test test/plugin.test.ts test/package.test.ts",
-    "validate": "npm run build && npm run check && npm test"
+    "validate": "npm run compile && npm run check && npm test"
   },
   "devDependencies": {
     "@opencode/plugin": "2.0.32",
