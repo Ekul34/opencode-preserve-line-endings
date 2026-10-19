@@ -1,6 +1,6 @@
 {
   "name": "opencode-preserve-line-endings",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Preserve original line endings and UTF-8 BOMs in OpenCode 2, with platform-aware defaults for new files.",
   "type": "module",
   "license": "0BSD",
@@ -24,8 +24,7 @@
     "build": "tsc -p tsconfig.json",
     "check": "tsc -p tsconfig.test.json",
     "test": "node --test test/plugin.test.ts test/package.test.ts",
-    "validate": "npm run build && npm run check && npm test",
-    "prepack": "npm run build"
+    "validate": "npm run build && npm run check && npm test"
   },
   "devDependencies": {
     "@opencode/plugin": "2.0.32",

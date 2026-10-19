@@ -33,7 +33,7 @@ Add the GitHub release to `plugins` in your global
 {
   "$schema": "https://opencode.ai/config.json",
   "plugins": [
-    "github:Ekul34/opencode-preserve-line-endings#v0.1.0"
+    "github:Ekul34/opencode-preserve-line-endings#v0.1.1"
   ]
 }
 ```
@@ -45,7 +45,7 @@ This release is distributed on GitHub, not the npm registry.
 Alternatively, use the CLI for a global installation:
 
 ```sh
-opencode plugin add 'github:Ekul34/opencode-preserve-line-endings#v0.1.0'
+opencode plugin add 'github:Ekul34/opencode-preserve-line-endings#v0.1.1'
 ```
 
 OpenCode normally reloads configuration automatically. Check `opencode plugin list`

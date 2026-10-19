@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1 — 2026-10-19
+
+- Remove the `prepack` lifecycle hook: OpenCode's production Git installer must
+  use the committed JavaScript without attempting a TypeScript build.
+- Guard against installation lifecycle scripts in the package regression test.
+
 ## 0.1.0 — 2026-10-19
 
 Initial public release for OpenCode 2.
