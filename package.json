@@ -1,0 +1,35 @@
+{
+  "name": "opencode-preserve-line-endings",
+  "version": "0.1.0",
+  "description": "Preserve original line endings and UTF-8 BOMs in OpenCode 2, with platform-aware defaults for new files.",
+  "type": "module",
+  "license": "0BSD",
+  "author": "Ekul34",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ekul34/opencode-preserve-line-endings.git"
+  },
+  "homepage": "https://github.com/Ekul34/opencode-preserve-line-endings#readme",
+  "bugs": "https://github.com/Ekul34/opencode-preserve-line-endings/issues",
+  "keywords": ["opencode", "opencode-plugin", "line-endings", "crlf", "lf", "bom", "windows"],
+  "engines": { "node": ">=22.18.0" },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js", "default": "./dist/index.js" },
+    "./server": { "types": "./dist/index.d.ts", "import": "./dist/index.js", "default": "./dist/index.js" }
+  },
+  "files": ["dist", "src", "index.ts", "LICENSE", "README.md", "CHANGELOG.md", "CONTRIBUTING.md"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.test.json",
+    "test": "node --test test/plugin.test.ts test/package.test.ts",
+    "validate": "npm run build && npm run check && npm test",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@opencode/plugin": "2.0.32",
+    "@types/node": "24.19.2",
+    "typescript": "7.0.2"
+  }
+}
